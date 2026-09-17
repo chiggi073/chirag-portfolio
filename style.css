@@ -220,27 +220,18 @@ nav {
 /* Hero Section */
 .hero {
   position: relative;
-  padding: 90px clamp(20px, 6vw, 80px) 90px;
-  overflow: hidden;
-  min-height: 92vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.hero-container {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1320px;
+  align-items: flex-start;
+  padding: 100px clamp(20px, 6vw, 80px) 90px;
+  overflow: hidden;
+  min-height: 92vh;
 }
 
 .hero-text {
-  max-width: 780px;
+  max-width: 960px;
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
@@ -273,10 +264,11 @@ nav {
   50% { opacity: 0; }
 }
 
+/* Massive Uncompressed Hero Title */
 .big-name {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: clamp(3.2rem, 8.2vw, 7.4rem);
+  font-size: clamp(3.8rem, 10.5vw, 8.8rem);
   line-height: 0.92;
   letter-spacing: -0.035em;
   margin-bottom: 12px;
@@ -312,9 +304,9 @@ nav {
 }
 
 .name-underline {
-  width: min(440px, 60vw);
+  width: min(480px, 70vw);
   height: 14px;
-  margin: 6px 0 28px;
+  margin: 6px 0 30px;
 }
 
 .name-underline path {
@@ -342,7 +334,7 @@ nav {
   border-radius: 14px;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   box-shadow: var(--shadow);
   opacity: 0;
   animation: fadeUp 0.6s ease forwards 1.4s;
@@ -365,7 +357,7 @@ nav {
 
 .floating-pills {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   margin-top: 20px;
   opacity: 0;
@@ -375,10 +367,10 @@ nav {
 .float-pill {
   background: #FFF;
   border: 2.5px solid var(--ink);
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 24px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
   box-shadow: 3.5px 3.5px 0 var(--ink);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -390,10 +382,10 @@ nav {
 }
 
 .hero-sub {
-  margin-top: 24px;
-  font-size: 1.15rem;
-  max-width: 680px;
-  line-height: 1.75;
+  margin-top: 28px;
+  font-size: 1.2rem;
+  max-width: 760px;
+  line-height: 1.8;
   color: #373746;
   opacity: 0;
   animation: fadeUp 0.6s ease forwards 1.6s;
@@ -402,14 +394,19 @@ nav {
 .hero-cta {
   display: flex;
   gap: 16px;
-  margin-top: 34px;
+  margin-top: 38px;
   flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp 0.6s ease forwards 1.8s;
 }
 
-/* Right Side Data Console Card */
-.hero-card-side {
+/* Floating Data Console Widget Positioned on Right Side */
+.hero-floating-card {
+  position: absolute;
+  top: 130px;
+  right: clamp(20px, 5vw, 80px);
+  width: min(390px, 32vw);
+  z-index: 5;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 1.7s;
 }
@@ -537,6 +534,18 @@ nav {
   background: #10B981;
   box-shadow: 0 0 10px #10B981;
   animation: pulseGlow 2s infinite;
+}
+
+/* Responsive adjustment for screens where floating card would overlap */
+@media (max-width: 1280px) {
+  .hero-floating-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 540px;
+    margin-top: 36px;
+  }
 }
 
 /* Neo Brutalist Buttons */
@@ -1162,13 +1171,6 @@ section {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 1080px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-}
-
 @media (max-width: 860px) {
   .nav-links {
     display: none;
