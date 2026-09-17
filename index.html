@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Chirag Nauhwar | Data Analyst & Data Science Specialist">
+  <meta property="og:description" content="Portfolio of Chirag Nauhwar — Data Analyst specializing in Python, SQL, Power BI, Excel, and Machine Learning.">
+  <meta property="og:type" content="website">
+  <title>Chirag Nauhwar — Data Analyst & Data Science Specialist</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav>
+    <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      &lt;/&gt; Chirag<span>.data</span>
+    </div>
+    
+    <div class="nav-links mono" id="navLinks">
+      <a href="#about">.about()</a>
+      <a href="#skills">.skills()</a>
+      <a href="#projects">.projects()</a>
+      <a href="#education">.education()</a>
+      <a href="#contact">.contact()</a>
+
+      <!-- Theme Accent Switcher -->
+      <div class="theme-picker" title="Switch Theme Color Accent">
+        <div class="theme-dot" style="background:#0052FF" onclick="setTheme('default')" title="Royal Blue Accent"></div>
+        <div class="theme-dot" style="background:#00D2FF" onclick="setTheme('theme-cyan')" title="Electric Cyan Accent"></div>
+        <div class="theme-dot" style="background:#8B5CF6" onclick="setTheme('theme-violet')" title="Cyber Violet Accent"></div>
+        <div class="theme-dot" style="background:#10B981" onclick="setTheme('theme-emerald')" title="Emerald Data Accent"></div>
+        <div class="theme-dot" style="background:#FF6B00" onclick="setTheme('theme-sunset')" title="Neon Sunset Accent"></div>
+      </div>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero">
+    <div class="blob" style="width:360px;height:360px;background:var(--accent-primary);opacity:0.14;top:-100px;right:-90px;"></div>
+    <div class="blob" style="width:260px;height:260px;background:#10B981;opacity:0.12;bottom:20px;left:-90px;"></div>
+
+    <div class="hero-text">
+      <span class="eyebrow mono">
+        <span>// data_analyst.py</span>
+        <span class="cursor"></span>
+      </span>
+
+      <h1 class="big-name" id="bigName" aria-label="Chirag Nauhwar">
+        <span class="line first" data-text="CHIRAG"></span>
+        <span class="line second" data-text="NAUHWAR"></span>
+      </h1>
+      
+      <svg class="name-underline" viewBox="0 0 460 14" preserveAspectRatio="none">
+        <path d="M5 7 Q 115 -2, 230 7 T 455 7"/>
+      </svg>
+      
+      <div class="highlight-tag">
+        <span class="badge-dot"></span>
+        <span>Data Analyst & BCA (Data Science) Graduate</span>
+      </div>
+
+      <div class="floating-pills">
+        <span class="float-pill">⚡ SQL Query Optimization</span>
+        <span class="float-pill">📊 Power BI & DAX</span>
+        <span class="float-pill">🐍 Python (Pandas/NumPy)</span>
+        <span class="float-pill">🤖 Machine Learning</span>
+      </div>
+
+      <p class="hero-sub">
+        Detail-oriented Computer Applications graduate specializing in <strong>Data Science</strong> at GLA University. I turn raw transactions and unorganized tables into actionable business clarity — combining complex SQL query optimization, interactive Power BI dashboards, and exploratory data analysis in Python.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-fill">Explore Projects →</a>
+        <a href="#contact" class="btn btn-accent">Let's Connect</a>
+        <button class="btn" onclick="copyEmail()">✉ Copy Email</button>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="mono">scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24">
+        <path d="M8 0 V20 M2 14 L8 20 L14 14" stroke="#121316" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow mono">// about()</span>
+        <h2>About Me</h2>
+        <br>
+        <p>
+          I am a Computer Applications graduate specializing in <strong>Data Science</strong> at GLA University, Mathura. Equipped with strong technical proficiency in <strong>Python, SQL, Excel, and Power BI</strong>, alongside foundational understanding of Machine Learning and Artificial Intelligence, I thrive on solving data-intensive challenges.
+        </p>
+        <br>
+        <p>
+          Whether it is rewriting nested SQL queries using execution plans (`EXPLAIN`) to eliminate full table scans, or engineering custom DAX measures to highlight underperforming product lines, my mission is simple: <em>transform raw numbers into clear, high-impact business decisions.</em>
+        </p>
+
+        <div class="summary-highlights">
+          <div class="summary-stat">
+            <div class="number">BCA</div>
+            <div class="label">Data Science Specialization</div>
+          </div>
+          <div class="summary-stat">
+            <div class="number">DAX & SQL</div>
+            <div class="label">Modeling & Query Optimization</div>
+          </div>
+          <div class="summary-stat">
+            <div class="number">4+</div>
+            <div class="label">Industry Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section id="skills">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// skills()</span>
+      <h2>Technical Toolkit</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="--card-accent: #0052FF;">
+        <h3><span class="swatch" style="background:#0052FF"></span>Programming & Libraries</h3>
+        <div class="pill-row">
+          <span class="pill">Python</span>
+          <span class="pill">NumPy</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">SQL</span>
+          <span class="pill">C</span>
+          <span class="pill">HTML & CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="--card-accent: #10B981;">
+        <h3><span class="swatch" style="background:#10B981"></span>Analytics & Data Viz</h3>
+        <div class="pill-row">
+          <span class="pill">Power BI</span>
+          <span class="pill">DAX</span>
+          <span class="pill">Power Query</span>
+          <span class="pill">Data Modeling</span>
+          <span class="pill">Microsoft Excel</span>
+          <span class="pill">Statistical Analysis</span>
+          <span class="pill">EDA</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="--card-accent: #FF6B00;">
+        <h3><span class="swatch" style="background:#FF6B00"></span>AI & Machine Learning</h3>
+        <div class="pill-row">
+          <span class="pill">Machine Learning Fundamentals</span>
+          <span class="pill">Artificial Intelligence</span>
+          <span class="pill">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" style="--card-accent: #8B5CF6;">
+        <h3><span class="swatch" style="background:#8B5CF6"></span>Databases & Infrastructure</h3>
+        <div class="pill-row">
+          <span class="pill">MySQL</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Dataset Preprocessing</span>
+          <span class="pill">Git / GitHub</span>
+          <span class="pill">Jupyter Notebook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section id="projects">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// projects()</span>
+      <h2>Featured Projects</h2>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- Project 1 -->
+      <div class="proj-card reveal">
+        <div>
+          <div class="proj-header">
+            <span class="proj-tag" style="background:#0052FF">Power BI & Excel</span>
+            <span class="mono" style="font-size:0.85rem; font-weight:700;">01</span>
+          </div>
+
+          <h3>Sales Performance Dashboard</h3>
+          <div class="proj-subhead">Business Intelligence & Trend Analysis</div>
+
+          <div class="metric-badge">
+            📈 Key Business Insights & YoY Growth Metrics
+          </div>
+
+          <div class="stack-line">
+            <div class="stack-chip" style="background:#0052FF"></div>
+            <div class="stack-chip" style="background:#10B981"></div>
+            <div class="stack-chip" style="background:#FF6B00"></div>
+          </div>
+
+          <ul class="proj-bullets">
+            <li>Developed an interactive Power BI dashboard to analyze sales transaction data, identifying seasonal trends and customer purchasing patterns.</li>
+            <li>Cleaned and preprocessed unstructured data using Excel / Power Query to prepare it for visualization.</li>
+            <li>Calculated key performance indicators (KPIs) including Total Revenue, Profit Margins, and Year-over-Year growth using DAX measures.</li>
+            <li>Provided key business recommendations that highlighted underperforming product categories.</li>
+          </ul>
+
+          <div class="code-preview">
+            <div class="code-title">
+              <span>DAX Measure Calculation</span>
+              <button class="interactive-toggle-btn" onclick="toggleDemoTable('dax-table')">▶ Simulate DAX Result</button>
+            </div>
+            <code><span class="code-keyword">YoY Sales Growth</span> = 
+<span class="code-func">VAR</span> CurrentYearSales = [Total Revenue]
+<span class="code-func">VAR</span> PriorYearSales = <span class="code-func">CALCULATE</span>([Total Revenue], <span class="code-func">SAMEPERIODLASTYEAR</span>('Calendar'[Date]))
+<span class="code-func">RETURN</span> 
+  <span class="code-func">DIVIDE</span>(CurrentYearSales - PriorYearSales, PriorYearSales, 0)</code>
+
+            <table class="demo-output-table" id="dax-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Current Revenue</th>
+                  <th>Prior Revenue</th>
+                  <th>YoY Growth %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Electronics</td>
+                  <td>$142,500</td>
+                  <td>$118,000</td>
+                  <td style="color:#10B981">+20.7%</td>
+                </tr>
+                <tr>
+                  <td>Apparel</td>
+                  <td>$89,200</td>
+                  <td>$94,100</td>
+                  <td style="color:#EF4444">-5.2%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">Power BI</span>
+          <span class="pill">DAX</span>
+          <span class="pill">Power Query</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Data Modeling</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proj-card reveal">
+        <div>
+          <div class="proj-header">
+            <span class="proj-tag" style="background:#10B981">SQL & MySQL</span>
+            <span class="mono" style="font-size:0.85rem; font-weight:700;">02</span>
+          </div>
+
+          <h3>Database Management & Query Optimization</h3>
+          <div class="proj-subhead">Relational Schema & Performance Tuning</div>
+
+          <div class="metric-badge">
+            ⚡ Full Table Scans Eliminated via B-Tree Indexing
+          </div>
+
+          <div class="stack-line">
+            <div class="stack-chip" style="background:#10B981"></div>
+            <div class="stack-chip" style="background:#0052FF"></div>
+            <div class="stack-chip" style="background:#8B5CF6"></div>
+          </div>
+
+          <ul class="proj-bullets">
+            <li>Designed a relational database schema for a mock e-commerce platform and wrote complex SQL queries (JOINs, subqueries, aggregations) to extract business metrics.</li>
+            <li>Optimized query performance by creating indexes and rewriting nested queries.</li>
+            <li>Analyzed query execution plans using <code>EXPLAIN</code> to reduce execution time and eliminate full table scans.</li>
+          </ul>
+
+          <div class="code-preview">
+            <div class="code-title">
+              <span>Optimized SQL Execution Plan</span>
+              <button class="interactive-toggle-btn" onclick="toggleDemoTable('sql-table')">▶ View Execution Plan</button>
+            </div>
+            <code><span class="code-keyword">EXPLAIN ANALYZE</span>
+<span class="code-keyword">SELECT</span> c.customer_name, <span class="code-func">COUNT</span>(o.order_id) <span class="code-keyword">AS</span> total_orders, <span class="code-func">SUM</span>(o.total_amount) <span class="code-keyword">AS</span> lifetime_val
+<span class="code-keyword">FROM</span> customers c <span class="code-keyword">JOIN</span> orders o <span class="code-keyword">ON</span> c.customer_id = o.customer_id
+<span class="code-keyword">WHERE</span> o.order_date >= <span class="code-string">'2025-01-01'</span>
+<span class="code-keyword">GROUP BY</span> c.customer_id <span class="code-keyword">HAVING</span> lifetime_val > 5000;</code>
+
+            <table class="demo-output-table" id="sql-table">
+              <thead>
+                <tr>
+                  <th>Node Type</th>
+                  <th>Key Index Used</th>
+                  <th>Rows Examined</th>
+                  <th>Cost / Latency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Index Scan</td>
+                  <td><code>idx_orders_customer</code></td>
+                  <td>1,420 (from 85,000)</td>
+                  <td style="color:#10B981">0.8ms (Fast)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">SQL</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Indexing</span>
+          <span class="pill">Query Optimization</span>
+          <span class="pill">EXPLAIN Plans</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & CERTS SECTION ============ -->
+  <section class="exp" id="education">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// education()</span>
+      <h2 style="color:white;">Academic Background</h2>
+    </div>
+
+    <div class="edu-container reveal">
+      <div class="edu-card">
+        <div class="edu-header">
+          <div class="edu-institution">GLA University, Mathura</div>
+          <div class="edu-year">Graduation Year: 2026</div>
+        </div>
+        <div class="edu-degree">Bachelor of Computer Applications (BCA) — <strong>Data Science Specialization</strong></div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <div class="edu-institution">Delhi Public School, Mathura</div>
+          <div class="edu-year">2022</div>
+        </div>
+        <div class="edu-degree">Class XII (Senior Secondary)</div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <div class="edu-institution">P.D.D.S.V.M, Vrindavan</div>
+          <div class="edu-year">2020</div>
+        </div>
+        <div class="edu-degree">Class X (Secondary)</div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs-wrapper reveal">
+      <span class="eyebrow mono">// certifications()</span>
+      <h2 style="color:white; margin-bottom:24px;">Certifications</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon" style="color:#4285F4; background:#E8F0FE;">G</div>
+          <div class="cert-info">
+            <b>Foundations: Data, Data, Everywhere</b>
+            <span>Google Certification</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon" style="color:#00A4EF; background:#F2F2F2;">MS</div>
+          <div class="cert-info">
+            <b>Python Programming Fundamentals</b>
+            <span>Microsoft Certification</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon" style="color:#8B5CF6; background:#F3E8FF;">AI</div>
+          <div class="cert-info">
+            <b>Python for Data Science</b>
+            <span>Cognitive AI</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon" style="color:#10B981; background:#D1FAE5;">&lt;&gt;</div>
+          <div class="cert-info">
+            <b>HTML & CSS Certification</b>
+            <span>LetsUpgrade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact" id="contact">
+    <div class="reveal">
+      <span class="eyebrow mono" style="background:white; color:var(--ink); border:2.5px solid var(--ink);">// contact()</span>
+      <h2>Let's turn data into decisions.</h2>
+      <p>
+        I am actively seeking Data Analyst and Data Science opportunities. Whether you have a project, job role, or query, feel free to reach out directly!
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:chirag.nauhwar07@gmail.com" class="btn">✉ chirag.nauhwar07@gmail.com</a>
+        <a href="tel:+917599859759" class="btn">☎ +91 7599859759</a>
+        <a href="https://linkedin.com/in/chiragnauhwar" target="_blank" rel="noopener noreferrer" class="btn">in LinkedIn</a>
+        <button class="btn" onclick="copyEmail()">📋 Copy Email</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
