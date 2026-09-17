@@ -1,17 +1,16 @@
 :root {
-  /* Ultra Aesthetic Modern Palette */
-  --cream: #F5F0EB;
-  --ink: #0F172A;
-  --dark-bg: #0B0F19;
+  /* Exact Aesthetic Palette from Reference Screenshot */
+  --cream: #F8F4F0;
+  --ink: #151515;
+  --dark-bg: #16161E;
   --card-bg: #FFFFFF;
   
-  /* High-Vibrancy Designer Accents */
-  --accent-primary: #4F46E5; /* Deep Electric Indigo */
-  --accent-cyan: #06B6D4;    /* Cyber Cyan */
-  --accent-emerald: #10B981; /* Neon Emerald */
-  --accent-amber: #F59E0B;   /* Vibrant Amber */
-  --accent-purple: #8B5CF6;  /* Royal Purple */
-  --accent-pink: #EC4899;    /* Hot Pink */
+  /* Signature Pastel Lavender & Cyber Violet Accents */
+  --accent-primary: #6E56CF; /* Deep Pastel Violet */
+  --accent-soft: #EAE5FA;    /* Soft Lavender Tint */
+  --accent-cyan: #00B8D9;    /* Crisp Cyber Cyan */
+  --accent-emerald: #10B981; /* Fresh Emerald */
+  --accent-amber: #FF7A00;   /* Bright Sunset Orange */
   
   /* Neo-Brutalist Shadow Tokens */
   --shadow-sm: 4px 4px 0 var(--ink);
@@ -21,11 +20,11 @@
 
 /* Theme Variant Overrides */
 body.theme-cyan {
-  --accent-primary: #06B6D4;
+  --accent-primary: #00B8D9;
 }
 
 body.theme-violet {
-  --accent-primary: #8B5CF6;
+  --accent-primary: #6E56CF;
 }
 
 body.theme-emerald {
@@ -33,7 +32,7 @@ body.theme-emerald {
 }
 
 body.theme-sunset {
-  --accent-primary: #FF5E36;
+  --accent-primary: #FF7A00;
 }
 
 * {
@@ -49,12 +48,12 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--cream);
-  /* Aesthetic Mesh Texture */
+  /* Exact Background Mesh: Soft Lilac/Lavender Glow at Top-Right + Dot Matrix Pattern */
   background-image: 
-    radial-gradient(rgba(15, 23, 42, 0.08) 1.2px, transparent 1.2px),
-    radial-gradient(circle at 10% 20%, rgba(79, 70, 229, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
-  background-size: 26px 26px, 100% 100%, 100% 100%;
+    radial-gradient(ellipse at 85% 12%, rgba(220, 208, 252, 0.75) 0%, rgba(248, 244, 240, 0) 65%),
+    radial-gradient(ellipse at 15% 70%, rgba(230, 222, 255, 0.5) 0%, rgba(248, 244, 240, 0) 55%),
+    radial-gradient(rgba(21, 21, 21, 0.08) 1.2px, transparent 1.2px);
+  background-size: 100% 100%, 100% 100%, 22px 22px;
   color: var(--ink);
   overflow-x: hidden;
   line-height: 1.6;
@@ -80,13 +79,13 @@ a {
   z-index: 0;
   animation: floatDrift 16s ease-in-out infinite alternate;
   pointer-events: none;
-  filter: blur(50px);
+  filter: blur(45px);
 }
 
 @keyframes floatDrift {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -40px) scale(1.15); }
-  100% { transform: translate(-20px, 30px) scale(0.95); }
+  50% { transform: translate(35px, -35px) scale(1.12); }
+  100% { transform: translate(-20px, 25px) scale(0.95); }
 }
 
 /* Navigation */
@@ -98,7 +97,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 18px clamp(20px, 5vw, 60px);
-  background: rgba(245, 240, 235, 0.88);
+  background: rgba(248, 244, 240, 0.88);
   backdrop-filter: blur(14px);
   border-bottom: 3.5px solid var(--ink);
 }
@@ -244,11 +243,11 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #FFF;
+  background: var(--accent-soft);
   padding: 8px 18px;
   border: 3px solid var(--ink);
   border-radius: 10px;
-  box-shadow: 4px 4px 0 var(--accent-primary);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .eyebrow .cursor {
@@ -329,7 +328,7 @@ nav {
   gap: 12px;
   margin-top: 8px;
   padding: 12px 24px;
-  background: #FFF;
+  background: var(--accent-soft);
   border: 3.5px solid var(--ink);
   border-radius: 14px;
   font-family: 'JetBrains Mono', monospace;
@@ -386,7 +385,7 @@ nav {
   font-size: 1.2rem;
   max-width: 760px;
   line-height: 1.8;
-  color: #334155;
+  color: #373746;
   opacity: 0;
   animation: fadeUp 0.6s ease forwards 1.6s;
 }
@@ -442,7 +441,7 @@ nav {
 }
 
 .btn-fill:hover {
-  background: #1E293B;
+  background: #282836;
 }
 
 .btn-accent {
@@ -518,7 +517,7 @@ section {
 .about p {
   font-size: 1.2rem;
   line-height: 1.85;
-  color: #334155;
+  color: #373746;
 }
 
 .summary-highlights {
@@ -726,7 +725,7 @@ section {
   flex-direction: column;
   gap: 12px;
   font-size: 1rem;
-  color: #334155;
+  color: #373746;
 }
 
 .proj-bullets li::marker {
@@ -735,7 +734,7 @@ section {
 
 /* Code Snippet Container */
 .code-preview {
-  background: #0B0F19;
+  background: #12121A;
   color: #F8FAFC;
   border: 3.5px solid var(--ink);
   border-radius: 14px;
@@ -753,7 +752,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 12px;
-  border-bottom: 1px solid #1E293B;
+  border-bottom: 1px solid #242436;
   padding-bottom: 8px;
   display: flex;
   justify-content: space-between;
@@ -767,15 +766,15 @@ section {
 }
 
 .code-keyword { color: #FF007A; font-weight: 700; }
-.code-func { color: #06B6D4; font-weight: 600; }
+.code-func { color: #00B8D9; font-weight: 600; }
 .code-string { color: #10B981; }
-.code-var { color: #F59E0B; }
+.code-var { color: #FF7A00; }
 
 /* Interactive Query Toggle Table output */
 .interactive-toggle-btn {
-  background: #1E293B;
+  background: #1C1C28;
   color: #38BDF8;
-  border: 1.5px solid #475569;
+  border: 1.5px solid #3A3A52;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.74rem;
   padding: 4px 10px;
@@ -785,7 +784,7 @@ section {
 }
 
 .interactive-toggle-btn:hover {
-  background: #334155;
+  background: #28283B;
   color: #FFF;
 }
 
@@ -794,7 +793,7 @@ section {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.76rem;
-  background: #141C2E;
+  background: #181824;
   border-radius: 8px;
   overflow: hidden;
   display: none;
@@ -806,12 +805,12 @@ section {
 
 .demo-output-table th, .demo-output-table td {
   padding: 7px 12px;
-  border: 1px solid #1E293B;
+  border: 1px solid #28283B;
   text-align: left;
 }
 
 .demo-output-table th {
-  background: #0B0F19;
+  background: #12121A;
   color: #38BDF8;
 }
 
@@ -824,9 +823,9 @@ section {
 }
 
 .exp .eyebrow {
-  background: #161B28;
+  background: #20202E;
   color: #FFF;
-  border-color: #334155;
+  border-color: #3A3A52;
   box-shadow: 4px 4px 0 #000;
 }
 
@@ -838,8 +837,8 @@ section {
 }
 
 .edu-card {
-  background: #161B28;
-  border: 3.5px solid #334155;
+  background: #20202E;
+  border: 3.5px solid #3A3A52;
   border-radius: 20px;
   padding: 32px clamp(20px, 4vw, 42px);
   box-shadow: 8px 8px 0 #000;
@@ -870,17 +869,17 @@ section {
 .edu-year {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.92rem;
-  background: #1E293B;
+  background: #2A2A3D;
   color: #FFF;
   padding: 5px 16px;
   border-radius: 20px;
   font-weight: 600;
-  border: 1px solid #475569;
+  border: 1px solid #4A4A68;
 }
 
 .edu-degree {
   font-size: 1.1rem;
-  color: #94A3B8;
+  color: #B0B0C4;
   font-weight: 500;
 }
 
@@ -942,7 +941,7 @@ section {
 .cert-info span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: #475569;
+  color: #555566;
   font-weight: 600;
 }
 
