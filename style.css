@@ -229,7 +229,7 @@ nav {
 }
 
 .hero-text {
-  max-width: 900px;
+  max-width: 1050px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -305,7 +305,7 @@ nav {
 .name-underline {
   width: min(440px, 60vw);
   height: 12px;
-  margin: 6px 0 20px;
+  margin: 6px 0 16px;
 }
 
 .name-underline path {
@@ -322,28 +322,27 @@ nav {
   to { stroke-dashoffset: 0; }
 }
 
-/* Right-aligned Highlight Tag Container (Matching Reference Image Layout) */
+/* Highlight Tag Container aligned to the right side of hero area */
 .highlight-tag-container {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: 4px;
-  margin-bottom: 24px;
+  margin-top: 10px;
+  margin-bottom: 28px;
 }
 
 .highlight-tag {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 12px 22px;
   background: var(--card-bg);
-  border: 3px solid var(--ink);
-  border-radius: 8px;
+  border: 3.5px solid var(--ink);
+  border-radius: 10px;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--ink);
   box-shadow: 6px 6px 0 var(--ink);
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards 1.5s;
+  opacity: 1 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -354,12 +353,11 @@ nav {
 
 .hero-sub {
   margin-top: 24px;
-  font-size: 1.12rem;
-  max-width: 660px;
-  line-height: 1.65;
+  font-size: 1.15rem;
+  max-width: 720px;
+  line-height: 1.7;
   color: #3a3a4a;
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards 1.7s;
+  opacity: 1 !important;
 }
 
 .hero-cta {
@@ -367,16 +365,15 @@ nav {
   gap: 16px;
   margin-top: 34px;
   flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards 1.85s;
+  opacity: 1 !important;
 }
 
 /* Neo Brutalist Buttons */
 .btn {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
-  padding: 13px 26px;
-  border: 3px solid var(--ink);
+  padding: 14px 28px;
+  border: 3.5px solid var(--ink);
   border-radius: 10px;
   background: var(--card-bg);
   color: var(--ink);
@@ -446,8 +443,8 @@ nav {
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  opacity: 0;
-  animation: fadeUp 0.6s ease forwards 2.1s, bob 2.2s ease-in-out infinite 2.7s;
+  opacity: 1 !important;
+  animation: bob 2.2s ease-in-out infinite;
 }
 
 @keyframes bob {
@@ -478,8 +475,8 @@ section {
 /* About Section */
 .about {
   background: var(--card-bg);
-  border-top: 3px solid var(--ink);
-  border-bottom: 3px solid var(--ink);
+  border-top: 3.5px solid var(--ink);
+  border-bottom: 3.5px solid var(--ink);
 }
 
 .about-grid {
@@ -501,7 +498,7 @@ section {
 
 .summary-stat {
   background: var(--cream);
-  border: 3px solid var(--ink);
+  border: 3.5px solid var(--ink);
   border-radius: 12px;
   padding: 22px;
   box-shadow: 4px 4px 0 var(--ink);
@@ -537,7 +534,7 @@ section {
 
 .skill-card {
   background: var(--card-bg);
-  border: 3px solid var(--ink);
+  border: 3.5px solid var(--ink);
   border-radius: 16px;
   padding: 26px;
   box-shadow: var(--shadow);
@@ -600,7 +597,7 @@ section {
 .proj-card {
   position: relative;
   background: var(--card-bg);
-  border: 3px solid var(--ink);
+  border: 3.5px solid var(--ink);
   border-radius: 18px;
   padding: 30px;
   overflow: hidden;
@@ -777,8 +774,8 @@ section {
 .exp {
   background: var(--dark-bg);
   color: var(--cream);
-  border-top: 3px solid var(--ink);
-  border-bottom: 3px solid var(--ink);
+  border-top: 3.5px solid var(--ink);
+  border-bottom: 3.5px solid var(--ink);
 }
 
 .exp .eyebrow {
@@ -797,7 +794,7 @@ section {
 
 .edu-card {
   background: #20202E;
-  border: 3px solid #3A3A52;
+  border: 3.5px solid #3A3A52;
   border-radius: 16px;
   padding: 28px clamp(20px, 4vw, 36px);
   box-shadow: 6px 6px 0 #000;
@@ -860,7 +857,7 @@ section {
 .cert-card {
   background: #FFF;
   color: var(--ink);
-  border: 3px solid var(--ink);
+  border: 3.5px solid var(--ink);
   border-radius: 14px;
   padding: 22px 24px;
   box-shadow: var(--shadow);
@@ -909,7 +906,7 @@ section {
   background: var(--accent-primary);
   color: white;
   text-align: center;
-  border-top: 3px solid var(--ink);
+  border-top: 3.5px solid var(--ink);
   transition: background 0.3s ease;
 }
 
@@ -991,7 +988,7 @@ section {
     background: var(--cream);
     flex-direction: column;
     padding: 20px;
-    border-bottom: 3px solid var(--ink);
+    border-bottom: 3.5px solid var(--ink);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
 
@@ -1009,5 +1006,9 @@ section {
 
   .proj-grid {
     grid-template-columns: 1fr;
+  }
+
+  .highlight-tag-container {
+    justify-content: flex-start;
   }
 }
